@@ -98,8 +98,8 @@ $(document).ready(function () {
     });
         
 	function addNameToBookedSlot(slot_id,student_name){
-		alert(slot_id);
-		alert(student_name);
+		//alert(slot_id);
+		//alert(student_name);
 		$("#idBookedStudentName_"+slot_id).append(student_name);
 	}
 
@@ -132,7 +132,7 @@ $(document).ready(function () {
 	        },
 	        
 	        error : function(data){
-	        	alert(data);
+	        	//alert(data);
 	        	alert("failed to get dates !");
 	        }
 	        

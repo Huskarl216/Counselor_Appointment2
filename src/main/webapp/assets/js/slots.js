@@ -115,7 +115,7 @@ $(document).ready(function () {
 	}
 	
 	function changeSlotsToBookedSlots(table){
-		alert(table);
+		//alert(table);
 		for(var i=0;i<table.length;i++){
 			console.log(Object.keys(table[i]));
 			var object = table[i];
