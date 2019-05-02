@@ -23,15 +23,11 @@ pipeline
 				sh 'mvn test'
 			}
 		}
-		stage('PUBLISH to DockerHub') 
+		stage('Start Container') 
 		{
 			steps 
 			{
-	        		withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) 
-	        		{
-				sh 'docker push huskarl216/basicjava1:image1'
-				sh 'docker push huskarl216/basicjava1:image2'
-		      		}
+				sh 'sudo docker-compose up'
 			}
 		}
 	}
