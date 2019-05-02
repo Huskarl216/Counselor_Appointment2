@@ -2,7 +2,7 @@ version: '3'
 
 services:
    db:
-     image: image2
+     image: huskarl216/bascijava1:image2
      restart: always
      hostname: db
      environment:
@@ -13,7 +13,7 @@ services:
    webapi:
      depends_on:
        - db
-     image: image1
+     image: huskarl216/bascijava1:image1
      hostname: webapi
      ports:
        - "8081:8080"
