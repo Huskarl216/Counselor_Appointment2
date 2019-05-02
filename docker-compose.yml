@@ -2,7 +2,7 @@ version: '3'
 
 services:
    db:
-     image: huskarl216/basicjava1:image2
+     image: image2
      restart: always
      hostname: db
      environment:
@@ -13,7 +13,7 @@ services:
    webapi:
      depends_on:
        - db
-     image: huskarl216/basicjava1:image1
+     image: image1
      hostname: webapi
      ports:
        - "8081:8080"
