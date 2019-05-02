@@ -11,8 +11,8 @@ pipeline
 			{
 				sh 'mvn clean'
 				sh 'mvn package'
-				sh 'docker build -t huskarl216/basicjava1:image1 .'
-				sh 'docker build -t huskarl216/basicjava1:image2 -f mysql.Dockerfile .'
+				sh 'docker build -t image1 .'
+				sh 'docker build -t image2 -f mysql.Dockerfile .'
 			}
 		}
 
