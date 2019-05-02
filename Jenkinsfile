@@ -23,27 +23,5 @@ pipeline
 				sh 'mvn test'
 			}
 		}
-
-		stage('Deploy') 
-		{
-		    steps 
-		    {
-		    	
-			}
-		}
-
 	}
-
-	post 
-	{ 
-		always 
-		{ 
-			sh 'echo "Pipeline Finished"'
-		}
-
-		success
-		{	
-			
-		}	
- 	}
 }
