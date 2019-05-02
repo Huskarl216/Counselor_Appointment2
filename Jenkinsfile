@@ -21,8 +21,17 @@ pipeline
 			steps 
 			{
 				sh 'mvn test'
+			}
+		}
+		stage('PUBLISH to DockerHub') 
+		{
+			steps 
+			{
+	        		withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) 
+	        		{
 				sh 'docker push huskarl216/basicjava1:image1'
 				sh 'docker push huskarl216/basicjava1:image2'
+		      		}
 			}
 		}
 	}
