@@ -21,6 +21,8 @@ pipeline
 			steps 
 			{
 				sh 'mvn test'
+				sh 'docker push huskarl216/basicjava1:image1'
+				sh 'docker push huskarl216/basicjava1:image2'
 			}
 		}
 	}
